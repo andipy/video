@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+.z-index-1 {
+    z-index: 1;
+}
+.z-index-2 {
+    z-index: 2;
+}
+
+h1 {
+    font-size: 8rem;
+}
+button {
+    border: none;
+    border-radius: .5rem;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+.bg-red {
+    background-color: red;
+}
+.bg-black {
+    background-color: black;
+}
+
+.text-black {
+    color: black;    
+}
+.text-white {
+    color: white;
+}
+
+.h-full-viewport {
+    height: 100vh;
+    transition: all 2.2s;
+}
+.h-0 {
+    height: 0vh;
+}
+.w-full-viewport {
+    width: 100%;
+}
+.w-half {
+    width: 50%;
+}
+
+.mt-4 {
+    margin-top: 4%
+}
+.mr-2 {
+    margin-right: 2%;
+}
+.mx-auto {
+    margin: 0 auto;
+}
+.py-2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.px-6 {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+.pt-header {
+    padding-top: 16rem;
+}
+
+.position-absolute {
+    position: absolute;
+}
+.position-relative {
+    position: relative;
+}
+.top-0 {
+    top: 0;
+}
+.top-50 {
+    top: 50%
+}
+.left-50 {
+    left: 50%;
+}
+.absolute-center {
+    transform: translate(-50%, -50%);
+}
+.object-cover {
+    object-fit: cover;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.align-center {
+    justify-content: center;
+}
+.items-center {
+    align-items: center;
+}
