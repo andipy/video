@@ -120,3 +120,8 @@ button {
 .items-center {
     align-items: center;
 }
+
+.grop {
+    width: 320px;
+    margin-left: 180px;
+}

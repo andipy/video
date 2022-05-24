@@ -35,8 +35,8 @@
         </section>
     </header>
 
-    <section id="section2" class="w-full-viewport h-full-viewport bg-red">
-        <h2 class="text-white">compralo</h2>
+    <section id="section2" class="w-full-viewport h-full-viewport bg-red position-relative">
+        <h2 class="text-white position-absolute top-50 left-50 absolute-center">compralo</h2>
     </section>
 
     <section id="section3" class="w-full-viewport h-full-viewport overflow-hidden position-relative">
@@ -49,6 +49,14 @@
 
     <section id="section5" class="w-full-viewport h-full-viewport bg-red position-relative">
         <h2 id="welcome" class="text-white position-absolute top-50 left-50 absolute-center">Ho parecchie cellule da mostrarti</h2>
+    </section>
+
+    <section id="section6" class="w-full-viewport h-full-viewport bg-black position-relative">
+        <div class="container flex-row items-center">
+            <h2 id="welcome" class="w-half text-white pt-header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempora, harum sed necessitatibus culpa voluptate. Nostrum, temporibus incidunt, id obcaecati sunt necessitatibus accusantium minima ab eos odio aperiam possimus tenetur.</h2>
+            <img class="grop pt-header" src="mockup.svg" alt="">
+        </div>
+        
     </section>
 
     
@@ -93,8 +101,8 @@
             scroll = e.scrollPos / 1000;
         });
         setInterval(() => {
-            // delay += (scroll - delay) * acceleration;
-            video.currentTime = scroll;
+            delay += (scroll - delay) * acceleration;
+            video.currentTime = delay;
         }, 33.3);
 
         //////////////////////
@@ -105,11 +113,11 @@
         const text = document.getElementById('welcome');
 
         // text animation
-        const textAnimation = TweenMax.fromTo(text, 2, {opacity: 0}, {opacity: 1})
+        const textAnimation = TweenMax.fromTo(text, 4, {opacity: 0}, {opacity: 1})
 
         // scene 2
         let scene2 = new ScrollMagic.Scene({
-            duration: 1000,
+            duration: 2000,
             triggerElement: textSection,
             triggerHook: 1,
             offset: window.innerHeight

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="flex-row justify-space-around">
+            <div class="flex-column align-self-center w-50">
+                <h2 class="mb-xs">Manda in play</h2>
+                <p class="mb-xxl">Click sul punto giallo del video per far partire il video</p>
+                <h2 class="mb-xs">Reverse</h2>
+                <p class="mb-sm">Vuoi riavvolgere il video?</p>
+                <button id="back">Reverse the video</button>
+            </div>
+
+            <div class="container">
+                <div id="pin-1" class="pin"></div>                                
+                <video id ='my-video-1' src="assets/vid.mp4" muted="unmuted"></video>
+            </div>
+        </div>
+
+        <script>            
+            var pinOne = document.getElementById('pin-1');
+            var videoOne = document.getElementById('my-video-1');
+            var back = document.getElementById('back'); 
+            var intervalRewind;
+
+            pinOne.addEventListener('click', function() {
+                videoOne.pause();
+                videoOne.currentTime = 0;
+                videoOne.play();
+                this.classList.add('invisible');
+            });
+            videoOne.addEventListener('play', function() {
+                videoOne.playbackRate = 1.0;
+                clearInterval(intervalRewind);
+            });
+            videoOne.addEventListener('pause', function() {
+                video.playbackRate = 1.0;
+                clearInterval(intervalRewind);
+            });
+            back.addEventListener('click', function() {
+                intervalRewind = setInterval(function(){
+                    videoOne.playbackRate = 1.0;
+                    if(videoOne.currentTime == 0){
+                        clearInterval(intervalRewind);
+                        video.pause();
+                    }
+                    else{
+                        videoOne.currentTime += -.1;
+                    }
+                },30);
+                pinOne.classList.remove('invisible');
+            });
+
+            
+
+        </script>
+    </body>
+</html>;
