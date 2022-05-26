@@ -75,15 +75,56 @@ video {
     position: absolute;
     border-radius: 100%;
     background-color: yellow;
-    z-index: 1000;
+    z-index: 1000;    
+    transform-origin: center;
+}
+#pin-to-2 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transform-origin: center;
+    background-color: rgb(248, 248, 0);
+}
+#pin-to-3 {
+    left: 20%;
+    top: 20%;
+    transform: translate(-20%, -20%);
+    background-color: rgb(47, 255, 0);
+}
+#pin-back-1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(195, 0, 255);
+}
+#pin-back-2 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(1, 221, 255);
 }
 
 .invisible {
     opacity: 0;
     transform: scale(4);
     transition: all .7s;
+}
+.video-wrapper {
+    position: relative;
+}
+
+#video-1-wrapper {
+    z-index: 4;
+}
+#video-2-wrapper {
+    z-index: 3;
+}
+#video-3-wrapper {
+    z-index: 2;
+}
+#video-4-wrapper {
+    z-index: 1;
+}
+
+.video-wrapper {
+    position: absolute;
 }
