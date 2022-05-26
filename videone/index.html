@@ -5,7 +5,138 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="css/main.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            .mb-xs {
+                margin-bottom: .6rem;
+            }
+            .mb-sm {
+                margin-bottom: 1rem;
+            }
+            .mb-md {
+                margin-bottom: 1.4rem;
+            }
+            .mb-lg {
+                margin-bottom: 1.8rem;
+            }
+            .mb-xl {
+                margin-bottom: 2.2rem;
+            }
+            .mb-xxl {
+                margin-bottom: 2.6rem;
+            }
+
+            h2 {
+                font-size: 2.6rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            button {
+                padding: 5%;
+                font-size: 1rem;
+                border: none;
+                border-radius: 1rem;
+                background-color: rgb(26, 26, 26);
+                color: white;
+            }
+
+            .container {
+                height: 50vh;  
+                position: relative;
+                display: inline-block;  
+            }
+
+            .w-50 {
+                width: 400px;
+            }
+
+            .flex-row {
+                display: flex;
+            }
+            .flex-column {
+                display: flex;
+                flex-direction: column;
+            }
+            .align-self-center {
+                align-self: center;
+            }
+            .justify-space-around {
+                justify-content: space-around;
+            }
+
+            video {
+                height: inherit;
+            }
+
+            .pin {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                border-radius: 100%;
+                background-color: yellow;
+                z-index: 1000;    
+                transform-origin: center;
+            }
+            #pin-to-2 {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgb(248, 248, 0);
+            }
+            #pin-to-3 {
+                left: 20%;
+                top: 20%;
+                transform: translate(-20%, -20%);
+                background-color: rgb(47, 255, 0);
+            }
+            #pin-back-1 {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgb(195, 0, 255);
+            }
+            #pin-back-2 {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgb(1, 221, 255);
+            }
+
+            .invisible {
+                opacity: 0;
+                transform: scale(4);
+                transition: all .7s;
+            }
+            .video-wrapper {
+                position: relative;
+            }
+
+            #video-1-wrapper {
+                z-index: 4;
+            }
+            #video-2-wrapper {
+                z-index: 3;
+            }
+            #video-3-wrapper {
+                z-index: 2;
+            }
+            #video-4-wrapper {
+                z-index: 1;
+            }
+
+            .video-wrapper {
+                position: absolute;
+            }
+        </style>
     </head>
     <body>
         <div class="flex-row justify-space-around">
